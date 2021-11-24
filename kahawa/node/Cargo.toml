@@ -1,0 +1,60 @@
+[package]
+name = 'kahawa'
+version = '4.0.0-dev'
+description = 'Kahawa, a PoA blockchain and hub for the Scarab Network.'
+authors = ['Mu7 <https://github.com/MJR-Mu7/Kahawa.git>']
+homepage = ''
+edition = '2021'
+license = 'Unlicense'
+publish = false
+repository = 'https://github.com/MJR-Mu7/Kahawa.git'
+build = 'build.rs'
+
+[[bin]]
+name = 'kahawa'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[build-dependencies]
+substrate-build-script-utils = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '3.0.0' }
+
+[dependencies]
+jsonrpc-core = '18.0.0'
+structopt = '0.3.8'
+
+metro = { path = '../runtime', version = '1.0.0'}
+frame-benchmarking = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+frame-benchmarking-cli = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-transaction-payment-rpc = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-basic-authorship = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-cli = { features = ['wasmtime'], git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-client-api = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-consensus = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-consensus-aura = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-executor = { features = ['wasmtime'], git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-finality-grandpa = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-keystore = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-rpc = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-rpc-api = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-service = { features = ['wasmtime'], git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sc-telemetry = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-transaction-pool = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sc-transaction-pool-api = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-api = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-block-builder = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-blockchain = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-consensus = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sp-consensus-aura = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
+sp-core = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-finality-grandpa = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-runtime = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-timestamp = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+substrate-frame-rpc-system = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+
+[features]
+default = []
+runtime-benchmarks = [
+    'metro/runtime-benchmarks'
+    
+    ]
