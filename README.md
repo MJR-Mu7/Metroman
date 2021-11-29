@@ -1,7 +1,7 @@
 # Kahawa
-A PoA(Proof of Authority) blockchain and Hub powering Kahawa, a blockchain network enabling smart contracts and governance. Kahawa has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt into it.
+A PoA(Proof of Authority) blockchain and Hub enabling smart contracts and governance. Kahawa has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt into it.
 
-:rocket: :rocket: :rocket: :rocket: :rocket:
+:rocket:    :rocket:     :rocket:     :rocket:     :rocket:
 
 
 ### Using Nix
