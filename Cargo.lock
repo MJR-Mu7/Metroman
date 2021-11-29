@@ -1756,16 +1756,16 @@ dependencies = [
 [[package]]
 name = "frame-system-benchmarking"
 version = "4.0.0-dev"
-source = "git+https://github.com/paritytech/substrate.git#f2cecdbf3fa5b98f5638719109a0ce43303b7160"
+source = "git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1#352c46a648a5f2d4526e790a184daa4a1ffdb3bf"
 dependencies = [
- "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
- "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
- "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
+ "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
  "parity-scale-codec",
  "scale-info",
- "sp-core 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
- "sp-runtime 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
- "sp-std 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
+ "sp-core 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "sp-runtime 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "sp-std 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
 ]
 
 [[package]]
@@ -2127,9 +2127,9 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "hex-literal"
-version = "0.3.3"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21e4590e13640f19f249fe3e4eca5113bc4289f2497710378190e7f4bd96f45b"
+checksum = "7ebdb29d2ea9ed0083cd8cece49bbd968021bd99b0849edb4a9a7ee0fdf6a4e0"
 
 [[package]]
 name = "hex_fmt"
@@ -2591,8 +2591,10 @@ dependencies = [
 name = "kahawa"
 version = "4.0.0-dev"
 dependencies = [
+ "bs58",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
  "frame-benchmarking-cli",
+ "frame-system-benchmarking",
  "jsonrpc-core",
  "metro",
  "pallet-transaction-payment-rpc",
@@ -4862,9 +4864,9 @@ dependencies = [
 
 [[package]]
 name = "parity-db"
-version = "0.3.3"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e7ccc4a8687027deb53d45c5434a1f1b330c9d1069a59cfe80a62aa9a1da25ae"
+checksum = "78a95abf24f1097c6e3181abbbbfc3630b3b5e681470940f719b69acb4911c7f"
 dependencies = [
  "blake2-rfc",
  "crc32fast",
@@ -6761,9 +6763,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.68"
+version = "1.0.72"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f690853975602e1bfe1ccbf50504d67174e3bcf340f23b5ea9992e0587a52d8"
+checksum = "d0ffa0837f2dfa6fb90868c2b5468cad482e175f7dad97e7421951e663f2b527"
 dependencies = [
  "itoa",
  "ryu",
