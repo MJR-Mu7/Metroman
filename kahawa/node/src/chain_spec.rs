@@ -183,7 +183,7 @@ pub fn kahawa_properties() -> Properties {
 	let mut properties = Properties::new();
 
 	properties.insert("ss58Format".into(), 42.into());
-	properties.insert("tokenDecimals".into(), 8.into());
+	properties.insert("tokenDecimals".into(), 12.into());
 	properties.insert("tokenSymbol".into(), "KOFI".into());
 
 	properties
