@@ -1,11 +1,11 @@
 [package]
 name = 'kahawa'
 version = '4.0.0-dev'
-description = 'Kahawa, a PoA blockchain and hub for the Scarab Network.'
+description = 'Kahawa, a PoA blockchain and Hub for Kahawa based chains.'
 authors = ['Mu7 <https://github.com/MJR-Mu7/Kahawa.git>']
 homepage = ''
 edition = '2021'
-license = 'Unlicense'
+license = 'GNU General Public License v3.0'
 publish = false
 repository = 'https://github.com/MJR-Mu7/Kahawa.git'
 build = 'build.rs'

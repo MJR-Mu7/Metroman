@@ -1,6 +1,7 @@
 use metro::{
 	AccountId, AuraConfig, BalancesConfig, GenesisConfig, GrandpaConfig, Signature, SudoConfig,
-	SystemConfig, WASM_BINARY,
+	SystemConfig, WASM_BINARY, CouncilConfig, TechnicalCommitteeConfig, DemocracyConfig,
+	IndicesConfig, SocietyConfig, ElectionsConfig,
 };
 use sc_service::ChainType;
 use sp_consensus_aura::sr25519::AuthorityId as AuraId;
@@ -151,5 +152,28 @@ fn testnet_genesis(
 			key: root_key,
 		},
 		transaction_payment: Default::default(),
+		assets: Default::default(),
+		council: CouncilConfig::default(),
+		technical_committee: TechnicalCommitteeConfig {
+			members: Default::default(),
+			phantom: Default::default(),
+		},
+		scheduler: Default::default(),
+		treasury: Default::default(),
+		democracy: DemocracyConfig::default(),
+		gilt: Default::default(),
+		transaction_storage: Default::default(),
+		indices: IndicesConfig { indices: vec![] },
+		vesting: Default::default(),
+		society: SocietyConfig {
+			members: Default::default(),
+			pot: 0,
+			max_members: 999,
+		},
+		technical_membership: Default::default(),
+		elections: ElectionsConfig {
+			members: Default::default(),
+		},
+
 	}
 }

@@ -1,11 +1,11 @@
 [package]
 name = 'metro'
 version = '1.0.0'
-description = 'Metro is the runtime powering Kahawa, a PoA blockchain for the Scarab Network.'
+description = 'Metro is the runtime powering Kahawa, a PoA blockchain and Hub.'
 authors = ['Mu7 <https://github.com/MJR-Mu7/Kahawa.git>']
 homepage = ''
 edition = '2021'
-license = 'Unlicense'
+license = 'GNU General Public License v3.0'
 publish = false
 repository = 'https://github.com/MJR-Mu7/Kahawa/'
 
@@ -17,6 +17,10 @@ substrate-wasm-builder = { git = 'https://github.com/paritytech/substrate.git', 
 
 [dependencies]
 codec = { default-features = false, features = ['derive'], package = 'parity-scale-codec', version = '2.0.0'}
+static_assertions = '1.1.0'
+hex-literal = { optional = true, version = '0.3.1'}
+log = { version = "0.4.14", default-features = false }
+scale-info = { default-features = false, features = ['derive'], version = '1.0'}
 
 frame-benchmarking = { default-features = false, git = 'https://github.com/paritytech/substrate.git', optional = true, tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 frame-executive = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
@@ -24,7 +28,6 @@ frame-support = { default-features = false, git = 'https://github.com/paritytech
 frame-system = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 frame-system-benchmarking = { default-features = false, git = 'https://github.com/paritytech/substrate.git', optional = true, tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 frame-system-rpc-runtime-api = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
-hex-literal = { optional = true, version = '0.3.1'}
 pallet-aura = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 pallet-balances = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 pallet-grandpa = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
@@ -33,7 +36,6 @@ pallet-sudo = { default-features = false, git = 'https://github.com/paritytech/s
 pallet-timestamp = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 pallet-transaction-payment = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 pallet-transaction-payment-rpc-runtime-api = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
-scale-info = { default-features = false, features = ['derive'], version = '1.0'}
 sp-api = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 sp-block-builder = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 sp-consensus-aura = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '0.10.0-dev'}
@@ -45,6 +47,47 @@ sp-session = { default-features = false, git = 'https://github.com/paritytech/su
 sp-std = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 sp-transaction-pool = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 sp-version = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+node-primitives = { version = '2.0.0', default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1'}
+
+#Metro
+pallet-assets = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-atomic-swap = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-authority-discovery = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-authorship = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-bags-list = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-bounties = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-collective = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-democracy = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-election-provider-multi-phase = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-elections-phragmen = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '5.0.0-dev'}
+pallet-gilt = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-indices = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-identity = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-lottery = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-membership = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-mmr = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-multisig = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-proxy = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-recovery = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-scheduler = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-society = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-tips = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-treasury = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-utility = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-asset-tx-payment = { default-features = false, git = 'https://github.com/paritytech/substrate.git', version = '4.0.0-dev'}
+pallet-transaction-storage = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-uniques = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-vesting = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-session = { version = '4.0.0-dev', features = ['historical'], default-features = false, git = 'https://github.com/paritytech/substrate.git' }
+pallet-session-benchmarking = { version = '4.0.0-dev', default-features = false, optional = true, git = 'https://github.com/paritytech/substrate.git' }
+sp-npos-elections = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-io = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+frame-election-provider-support = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-staking = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-staking = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-staking-reward-curve = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+pallet-im-online = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
+sp-authority-discovery = { default-features = false, git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-11-1', version = '4.0.0-dev'}
 
 #Local Pallets
 pallet-template = { default-features = false, path = '../../pallets/template', version = '4.0.0-dev' }
@@ -61,6 +104,33 @@ runtime-benchmarks = [
     'pallet-template/runtime-benchmarks',
     'pallet-timestamp/runtime-benchmarks',
     'sp-runtime/runtime-benchmarks',
+    'pallet-session-benchmarking',
+
+    'pallet-assets/runtime-benchmarks',
+    'pallet-bags-list/runtime-benchmarks',
+    'pallet-bounties/runtime-benchmarks',
+    'pallet-collective/runtime-benchmarks',
+    'pallet-democracy/runtime-benchmarks',
+    'pallet-election-provider-multi-phase/runtime-benchmarks',
+    'pallet-elections-phragmen/runtime-benchmarks',
+    'pallet-gilt/runtime-benchmarks',
+    'pallet-indices/runtime-benchmarks',
+    'pallet-identity/runtime-benchmarks',
+    'pallet-lottery/runtime-benchmarks',
+	'pallet-membership/runtime-benchmarks',
+	'pallet-mmr/runtime-benchmarks',
+	'pallet-multisig/runtime-benchmarks',
+	'pallet-identity/runtime-benchmarks',
+	'pallet-scheduler/runtime-benchmarks',
+    'pallet-proxy/runtime-benchmarks',
+    'pallet-society/runtime-benchmarks',
+	'pallet-uniques/runtime-benchmarks',
+	'pallet-vesting/runtime-benchmarks',
+    'pallet-tips/runtime-benchmarks',
+    'pallet-treasury/runtime-benchmarks',
+    'pallet-utility/runtime-benchmarks',
+    'pallet-transaction-storage/runtime-benchmarks',
+
 ]
 std = [
     'codec/std',
@@ -89,4 +159,44 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'node-primitives/std',
+
+    'sp-io/std',
+    'frame-election-provider-support/std',
+    'sp-staking/std',
+    'pallet-staking/std',
+
+    'pallet-assets/std',
+    'pallet-atomic-swap/std',
+    'pallet-authority-discovery/std',
+    'pallet-authorship/std',
+    'pallet-bags-list/std',
+    'pallet-bounties/std',
+    'pallet-collective/std',
+    'pallet-democracy/std',
+    'pallet-election-provider-multi-phase/std',
+    'pallet-elections-phragmen/std',
+    'pallet-gilt/std',
+    'pallet-indices/std',
+    'pallet-identity/std',
+    'pallet-lottery/std',
+	'pallet-membership/std',
+	'pallet-mmr/std',
+	'pallet-multisig/std',
+	'pallet-identity/std',
+	'pallet-scheduler/std',
+    'pallet-proxy/std',
+    'pallet-society/std',
+	'pallet-recovery/std',
+	'pallet-uniques/std',
+	'pallet-vesting/std',
+    'pallet-tips/std',
+    'pallet-treasury/std',
+    'pallet-utility/std',
+    'pallet-asset-tx-payment/std',
+    'pallet-transaction-storage/std',
+    'pallet-session/std',
+    'pallet-im-online/std',
+    'sp-authority-discovery/std',
+
 ]
