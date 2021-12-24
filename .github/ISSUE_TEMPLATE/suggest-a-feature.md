@@ -1,6 +1,6 @@
 ---
 name: Suggest a Feature
-about: Suggest a new feature or an improvement to an existing feature for Kahawa.
+about: Suggest a new feature or an improvement to an existing feature for Metroman.
 title: ""
 labels: enhancement
 assignees: ""

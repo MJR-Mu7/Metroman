@@ -2,16 +2,16 @@ version: "3.2"
 
 services:
   dev:
-    container_name: kahawa
+    container_name: metroman
     image: paritytech/ci-linux:974ba3ac-20201006
-    working_dir: /var/www/kahawa
+    working_dir: /var/www/metroman
     ports:
       - "9944:9944"
     environment:
-      - CARGO_HOME=/var/www/kahawa/.cargo
+      - CARGO_HOME=/var/www/metroman/.cargo
     volumes:
-      - .:/var/www/kahawa
+      - .:/var/www/metroman
       - type: bind
         source: ./.local
         target: /root/.local
-    command: bash -c "cargo build --release && ./target/release/kahawa --dev --ws-external"
+    command: bash -c "cargo build --release && ./target/release/metroman --dev --ws-external"

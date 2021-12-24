@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    'kahawa/*',
+    'metroman/*',
     'pallets/*',
 ]
 [profile.release]

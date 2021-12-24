@@ -2,7 +2,7 @@
 title: Installation
 ---
 
-This page will guide you through the steps needed to prepare a computer for development with Kahawa. Since Substrate is built with
+This page will guide you through the steps needed to prepare a computer for development with Substrate. Since Substrate is built with
 [the Rust programming language](https://www.rust-lang.org/), the first thing you will need to do is
 prepare the computer for Rust development - these steps will vary based on the computer's operating
 system. Once Rust is configured, you will use its toolchains to interact with Rust projects; the
@@ -10,10 +10,10 @@ commands for Rust's toolchains will be the same for all supported, Unix-based op
 
 ## Unix-Based Operating Systems
 
-Kahawa development is easiest on Unix-based operating systems like macOS or Linux. The examples
+Metroman development is easiest on Unix-based operating systems like macOS or Linux. The examples
 in the Substrate [Tutorials](https://docs.substrate.io/tutorials/v3) and 
 [How-to Guides](https://docs.substrate.io/how-to-guides/v3) use Unix-style terminals to demonstrate
-how to interact with Kahawa from the command line.
+how to interact with Metroman from the command line.
 
 ### macOS
 

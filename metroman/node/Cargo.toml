@@ -1,17 +1,17 @@
 [package]
-name = 'kahawa'
+name = 'metroman'
 version = '4.0.0-dev'
-description = 'Kahawa, a PoA and Contract(WASM) enabled blockchain.'
+description = 'Metroman, a PoA and Contract(WASM) enabled blockchain.'
 authors = ['Mu7 <https://github.com/MJR-Mu7/Kahawa.git>']
 homepage = ''
 edition = '2021'
 license = 'GNU General Public License v3.0'
 publish = false
-repository = 'https://github.com/MJR-Mu7/Kahawa.git'
+repository = 'https://github.com/MJR-Mu7/Metroman.git'
 build = 'build.rs'
 
 [[bin]]
-name = 'kahawa'
+name = 'metroman'
 
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']

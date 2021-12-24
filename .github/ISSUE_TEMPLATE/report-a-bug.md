@@ -1,6 +1,6 @@
 ---
 name: Report a Bug
-about: Report a problem with Kahawa.
+about: Report a problem with Metroman.
 title: ""
 labels: bug
 assignees: ""
@@ -8,9 +8,9 @@ assignees: ""
 
 **Description**
 
-_Tell us what happened. In particular, be specific about any changes you made to Kahawa.
+_Tell us what happened. In particular, be specific about any changes you made to Metroman.
 Ideally, provide a link to your project's GitHub repository. Please note that we are not able to
-support all conceivable changes to Kahawa project, but the more information you are able to
+support all conceivable changes to Metroman project, but the more information you are able to
 provide the more equipped we will be to help._
 
 **Steps to Reproduce**
