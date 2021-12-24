@@ -1,5 +1,5 @@
 # Metroman
-A PoA(Proof of Authority) blockchain and Hub enabling smart contracts and governance. Metroman has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt into it.
+A PoA(Proof of Authority) blockchain and Hub enabling smart contracts and governance. Metroman has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt.
 
 :rocket:    :rocket:     :rocket:     :rocket:     :rocket:
 
