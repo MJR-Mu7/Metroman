@@ -2588,45 +2588,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "kahawa"
-version = "4.0.0-dev"
-dependencies = [
- "bs58",
- "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
- "frame-benchmarking-cli",
- "frame-system-benchmarking",
- "jsonrpc-core",
- "metro",
- "pallet-transaction-payment-rpc",
- "sc-basic-authorship",
- "sc-cli",
- "sc-client-api",
- "sc-consensus",
- "sc-consensus-aura",
- "sc-executor",
- "sc-finality-grandpa",
- "sc-keystore",
- "sc-rpc",
- "sc-rpc-api",
- "sc-service",
- "sc-telemetry",
- "sc-transaction-pool",
- "sc-transaction-pool-api",
- "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
- "sp-consensus-aura",
- "sp-core 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
- "sp-finality-grandpa",
- "sp-runtime 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
- "sp-timestamp 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
- "structopt",
- "substrate-build-script-utils",
- "substrate-frame-rpc-system",
-]
-
-[[package]]
 name = "keccak"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3564,6 +3525,45 @@ dependencies = [
  "sp-version 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
  "static_assertions",
  "substrate-wasm-builder",
+]
+
+[[package]]
+name = "metroman"
+version = "4.0.0-dev"
+dependencies = [
+ "bs58",
+ "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "frame-benchmarking-cli",
+ "frame-system-benchmarking",
+ "jsonrpc-core",
+ "metro",
+ "pallet-transaction-payment-rpc",
+ "sc-basic-authorship",
+ "sc-cli",
+ "sc-client-api",
+ "sc-consensus",
+ "sc-consensus-aura",
+ "sc-executor",
+ "sc-finality-grandpa",
+ "sc-keystore",
+ "sc-rpc",
+ "sc-rpc-api",
+ "sc-service",
+ "sc-telemetry",
+ "sc-transaction-pool",
+ "sc-transaction-pool-api",
+ "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "sp-block-builder",
+ "sp-blockchain",
+ "sp-consensus",
+ "sp-consensus-aura",
+ "sp-core 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "sp-finality-grandpa",
+ "sp-runtime 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "sp-timestamp 4.0.0-dev (git+https://github.com/paritytech/substrate.git?tag=monthly-2021-11-1)",
+ "structopt",
+ "substrate-build-script-utils",
+ "substrate-frame-rpc-system",
 ]
 
 [[package]]

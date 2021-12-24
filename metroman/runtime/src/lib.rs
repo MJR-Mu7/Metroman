@@ -129,8 +129,8 @@ pub mod opaque {
 //   https://docs.substrate.io/v3/runtime/upgrades#runtime-versioning
 #[sp_version::runtime_version]
 pub const VERSION: RuntimeVersion = RuntimeVersion {
-	spec_name: create_runtime_str!("kahawa"),
-	impl_name: create_runtime_str!("kahawa_baridi"),
+	spec_name: create_runtime_str!("metroman"),
+	impl_name: create_runtime_str!("clubman"),
 	authoring_version: 1,
 	// The version of the runtime specification. A full node will not attempt to use its native
 	//   runtime in substitute for the on-chain Wasm runtime unless all of `spec_name`,
@@ -973,7 +973,7 @@ construct_runtime!(
 		TransactionPayment: pallet_transaction_payment,
 		Sudo: pallet_sudo,
 
-		// Include the custom logic from Kahawa.
+		// Include the custom logic from metroman.
 		TemplateModule: pallet_template,
 
 		Assets: pallet_assets,

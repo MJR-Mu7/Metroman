@@ -69,10 +69,10 @@ RUST_BACKTRACE=1 ./target/release/metroman -ldebug --dev
 
 ### Connect with Polkadot-JS Apps Front-end
 
-Once Kahawa is running locally, you can connect it with **Polkadot-JS Apps** front-end
+Once Metroman is running locally, you can connect it with **Polkadot-JS Apps** front-end
 to interact with your chain. [Click
 here](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your
-local Kahawa.
+local metroman.
 
 ### Multi-Node Local Testnet
 
@@ -89,14 +89,14 @@ directories.
 A blockchain node is an application that allows users to participate in a blockchain network.
 Substrate-based blockchain nodes expose a number of capabilities:
 
-- Networking: Kahawa uses the [`libp2p`](https://libp2p.io/) networking stack to allow the
+- Networking: Metroman uses the [`libp2p`](https://libp2p.io/) networking stack to allow the
   nodes in the network to communicate with one another.
 - Consensus: Blockchains must have a way to come to
   [consensus](https://docs.substrate.io/v3/advanced/consensus) on the state of the
   network. Substrate makes it possible to supply custom consensus engines and also ships with
   several consensus mechanisms that have been built on top of
   [Web3 Foundation research](https://research.web3.foundation/en/latest/polkadot/NPoS/index.html).
-- RPC Server: A remote procedure call (RPC) server is used to interact with Kahawa.
+- RPC Server: A remote procedure call (RPC) server is used to interact with Metroman.
 
 There are several files in the `node` directory - take special note of the following:
 
@@ -139,7 +139,7 @@ called "pallets". At the heart of FRAME is a helpful
 create pallets and flexibly compose them to create blockchains that can address
 [a variety of needs](https://www.substrate.io/substrate-users/).
 
-Review the [FRAME runtime implementation](./runtime/src/lib.rs) included in kahawa and note
+Review the [FRAME runtime implementation](./runtime/src/lib.rs) included in Metroman and note
 the following:
 
 - This file configures several pallets to include in the runtime. Each pallet configuration is
@@ -169,5 +169,4 @@ A FRAME pallet is compromised of a number of blockchain primitives:
 - Errors: When a dispatchable fails, it returns an error.
 - Config: The `Config` configuration interface is used to define the types and parameters upon
   which a FRAME pallet depends.
-  
   :rocket:

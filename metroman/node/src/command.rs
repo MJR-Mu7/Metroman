@@ -9,7 +9,7 @@ use sc_service::PartialComponents;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Kahawa".into()
+		"MetroMan".into()
 	}
 
 	fn impl_version() -> String {

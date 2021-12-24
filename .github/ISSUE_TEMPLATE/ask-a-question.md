@@ -1,6 +1,6 @@
 ---
 name: Ask a Question
-about: Ask a question about Kahawa.
+about: Ask a question about Metroman.
 title: ""
 labels: question
 assignees: ""

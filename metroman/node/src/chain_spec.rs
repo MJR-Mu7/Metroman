@@ -11,7 +11,7 @@ use sp_runtime::traits::{IdentifyAccount, Verify};
 
 // The URL for the telemetry server.
 // const STAGING_TELEMETRY_URL: &str = "wss://telemetry.polkadot.io/submit/";
-const DEFAULT_PROTOCOL_ID: &str = "KOFI";
+const DEFAULT_PROTOCOL_ID: &str = "MTR";
 
 /// Specialized `ChainSpec`. This is a specialization of the general Substrate ChainSpec type.
 pub type ChainSpec = sc_service::GenericChainSpec<GenesisConfig>;
@@ -71,7 +71,7 @@ pub fn development_config() -> Result<ChainSpec, String> {
 		// Protocol ID
 		Some(DEFAULT_PROTOCOL_ID),
 		// Properties
-		Some(kahawa_properties()),
+		Some(metroman_properties()),
 		// Extensions
 		None,
 	))
@@ -118,7 +118,7 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 		// Protocol ID
 		Some(DEFAULT_PROTOCOL_ID),
 		// Properties
-		Some(kahawa_properties()),
+		Some(metroman_properties()),
 		// Extensions
 		None,
 	))
@@ -179,12 +179,12 @@ fn testnet_genesis(
 	}
 }
 
-pub fn kahawa_properties() -> Properties {
+pub fn metroman_properties() -> Properties {
 	let mut properties = Properties::new();
 
 	properties.insert("ss58Format".into(), 42.into());
 	properties.insert("tokenDecimals".into(), 12.into());
-	properties.insert("tokenSymbol".into(), "KOFI".into());
+	properties.insert("tokenSymbol".into(), "MTR".into());
 
 	properties
 }
