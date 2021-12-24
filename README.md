@@ -1,5 +1,5 @@
-# Kahawa
-A PoA(Proof of Authority) blockchain and Hub enabling smart contracts and governance. Kahawa has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt into it.
+# Metroman
+A PoA(Proof of Authority) blockchain and Hub enabling smart contracts and governance. Metroman has WASM Contract, Govenance, Membership, Treasury, Assets, Account Recovery, Vesting among other cool features inbuilt into it.
 
 :rocket:    :rocket:     :rocket:     :rocket:     :rocket:
 
@@ -38,7 +38,7 @@ Once the project has been built, the following command can be used to explore al
 subcommands:
 
 ```sh
-./target/release/kahawa -h
+./target/release/metroman -h
 ```
 
 ## Run
@@ -52,19 +52,19 @@ node.
 This command will start the single-node development chain with persistent state:
 
 ```bash
-./target/release/kahawa --dev
+./target/release/metroman --dev
 ```
 
 Purge the development chain's state:
 
 ```bash
-./target/release/kahawa purge-chain --dev
+./target/release/metroman purge-chain --dev
 ```
 
 Start the development chain with detailed logging:
 
 ```bash
-RUST_BACKTRACE=1 ./target/release/kahawa -ldebug --dev
+RUST_BACKTRACE=1 ./target/release/metroman -ldebug --dev
 ```
 
 ### Connect with Polkadot-JS Apps Front-end
@@ -122,7 +122,7 @@ After the node has been [built](#build), refer to the embedded documentation to 
 capabilities and configuration parameters that it exposes:
 
 ```shell
-./target/release/kahawa --help
+./target/release/metroman --help
 ```
 
 ### Runtime
@@ -183,15 +183,15 @@ Then run the following command to start a single node development chain.
 
 This command will firstly compile your code, and then start a local development network. You can
 also replace the default command
-(`cargo build --release && ./target/release/kahawa --dev --ws-external`)
+(`cargo build --release && ./target/release/metroman --dev --ws-external`)
 by appending your own. A few useful ones are as follow.
 
 ```bash
 # Run Substrate node without re-compiling
-./scripts/docker_run.sh ./target/release/kahawa --dev --ws-external
+./scripts/docker_run.sh ./target/release/metroman --dev --ws-external
 
 # Purge the local dev chain
-./scripts/docker_run.sh ./target/release/kahawa purge-chain --dev
+./scripts/docker_run.sh ./target/release/metroman purge-chain --dev
 
 # Check whether the code is compilable
 ./scripts/docker_run.sh cargo check
